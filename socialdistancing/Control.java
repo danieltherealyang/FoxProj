@@ -132,7 +132,7 @@ public class Control {
                     //for each unique pair invoke the collision detection code
                     pDot1.collisionDetector(pDot2);
                 }
-                personToWallCollision(pDot1);
+                pDot1.personToWallCollision(wallArr, r);
                 pDot1.healthManager(); //manage health values of the Person
                 pDot1.velocityManager(); //manage social distancing and/or roaming values of the Person
                 
@@ -176,7 +176,7 @@ public class Control {
                 r.add(i.getBounds());
             }
         }
-
+        /*
         public void personToWallCollision(Person p) {
             
             Rectangle personRect = new Rectangle(p.x,p.y, p.width, p.height);
@@ -191,5 +191,5 @@ public class Control {
                         p.vy *= -1;
             }
         }
-        
+        */
 }
