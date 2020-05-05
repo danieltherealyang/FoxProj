@@ -161,7 +161,7 @@ public class Control {
                 
             }
         }
-        
+        Location pizza = new Location(410, 0, 255, 160, "Pizza", 330, 70);
         //Declares Wall sprites and positions of walls
         Walls wallArr;
         ArrayList<Rectangle> r = new ArrayList<Rectangle>();
@@ -172,6 +172,7 @@ public class Control {
             wallArr.add(new Wall(200, 0, true)); wallArr.add(new Wall(-25, 160, false));
             wallArr.add(new Wall(550, 400, true)); wallArr.add(new Wall(620, 400, false));
             wallArr.add(new Wall(200, 400, true)); wallArr.add(new Wall(-25, 400, false));
+            wallArr.add(pizza.getVertical());wallArr.add(pizza.getHorizontal());
             for (Wall i : wallArr.walls) {
                 r.add(i.getBounds());
             }
